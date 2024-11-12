@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <title>Dashboard</title>
+</head>
+<body>
+
+<header>
+    <h1>Learn Together</h1>
+    <div class="search-bar">
+        <form action="search_courses.php" method="GET">
+            <input type="text" name="query" placeholder="Search courses..." required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div class="user-profile">
+        <span id="username"><?php echo $name; ?></span>
+        <div class="dropdown-content">
+            <a href="edit_profile.php">Edit Profile</a>
+            <a href="logout.php">Logout</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="content">
+        <!-- Sidebar navigation -->
+        <nav class="sidebar">
+            <h2>Overview</h2>
+            <a href="profile.php">Dashboard</a>
+            <a href="inbox.php">Inbox</a>
+            <a href="courses.php">Courses</a>
+            <a href="groups.php">Groups</a>
+            <a href="settings.php">Settings</a>
+        </nav>
+
+        <!-- Main content area -->
+        <div class="main-section">
+            <div class="banner">
+                <h2>Learn and Share</h2>
+                <p>Connect with peers in your community to teach and learn new skills, both online and in-person.</p>
+            </div>
+
+            <!-- Dynamic Courses Section -->
+            <div class="courses-section">
+                <h2>Courses Near You</h2>
+                <div class="courses-grid">
+                    <?php foreach ($courses as $course): ?>
+                        <div class="course-box">
+                            <h3><?php echo htmlspecialchars($course['course_name']); ?></h3>
+                            <p>Location: <?php echo htmlspecialchars($course['location']); ?></p>
+                            <button onclick="window.location.href='course_details.php?id=<?php echo htmlspecialchars($course['course_id']); ?>'">View</button>
+
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+
+            <!-- Interests Section -->
+            <div class="interests-section">
+                <h2>Your Interests</h2>
+                <button>Update Interests</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

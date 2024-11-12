@@ -1,0 +1,131 @@
+/* General Body and Page Layout */
+body {
+    font-family: Arial, sans-serif;
+    
+    background: #76b852; /* fallback for old browsers */
+    background: rgb(141,194,111);
+    background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Container for the form */
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #FFFFFF;
+    
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+}
+
+/* Styling Form Inputs */
+div {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #384226;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: #1d3449;
+    outline: none;
+}
+
+/* Textarea Specific */
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    outline: 0;
+    background: #4CAF50;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 16px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #4ec362;
+}
+
+/* Styling for the Create New Course Button */
+a button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+a button:hover {
+    background-color: #45a049;
+}
+
+/* Responsiveness for Small Screens */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    textarea {
+        font-size: 14px;
+    }
+
+    button[type="submit"],
+    a button {
+        padding: 10px;
+    }
+}

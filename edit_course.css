@@ -1,0 +1,89 @@
+/* Styling for the Edit Course form */
+body {
+    font-family: Arial, sans-serif;
+    background: #76b852; /* fallback for old browsers */
+    background: rgb(141,194,111);
+    background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    overflow-y: auto; /* Enables scrolling if content exceeds viewport height */
+}
+
+.form-container {
+    width: 90%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    margin-top: 20px; /* Adds space at the top */
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+button {
+    background: #4CAF50;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 16px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #1e5f8b;
+}
+
+button[type="submit"]:nth-child(2) {
+    background-color: #e74c3c;
+}
+
+button[type="submit"]:nth-child(2):hover {
+    background-color: #c0392b;
+}

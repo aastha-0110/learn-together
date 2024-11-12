@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #2b6777;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:relative;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.user-profile {
+    position: relative;
+    display: inline-block;
+}
+
+.user-profile #username {
+    padding: 10px;
+    background-color: #2b6777;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.user-profile:hover .dropdown-content,
+.user-profile .dropdown-content:hover {
+    display: block;
+}
+.search-bar {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    font-size: 16px;
+    width: 200px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 6px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #45a049;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.banner {
+    background-color: #52ab98;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #2b6777;
+    color: white;
+    padding: 15px;
+    height: 100vh;
+    position: fixed;
+}
+/* CSS for the active sidebar link */
+.sidebar a.active {
+    background-color: #4CAF50; /* or any color you prefer for the active link */
+    color: white;
+    font-weight: bold;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #52ab98;
+}
+
+.main-section {
+    flex-grow: 1;
+    margin-left: 22%; /* Adjust for sidebar width */
+    padding: 20px;
+}
+
+.courses-section, .interests-section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.courses-section h2 {
+    margin-top: 0;
+}
+
+.courses-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap:inherit;
+}
+
+.course-box {
+    background-color: #f9f9f9;
+    padding: 10px;
+    width: 30%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course-box h3 {
+    margin: 0;
+}
+
+.course-box p {
+    font-size: 14px;
+}
+
+.course-box button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.course-box button:hover {
+    background-color: #45a049;
+}
